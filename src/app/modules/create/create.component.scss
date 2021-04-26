@@ -1,0 +1,35 @@
+::ng-deep .mat-select-trigger {
+  min-width: 250px;
+  background-color: transparent;
+  text-transform: uppercase;
+}
+/*
+::ng-deep .mat-select-panel {
+  max-height: 60px !important;
+}*/
+
+
+.mat-op
+{
+display: inline-block;
+background-color: transparent;
+width: 250px;
+height: 60px;
+padding-left: 20px;
+font-size: 16px;
+font-family: "Muli", sans-serif;
+font-weight: 400;
+text-transform: uppercase;
+}
+
+.mat-select-panel {
+  display: inline-block;
+background-color: transparent;
+width: 250px;
+height: 60px;
+padding-left: 20px;
+font-size: 16px;
+font-family: "Muli", sans-serif;
+font-weight: 400;
+text-transform: uppercase;
+}

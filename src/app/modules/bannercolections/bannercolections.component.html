@@ -1,0 +1,33 @@
+<div class="container-fluid mt-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 order-2 order-md-1">
+            <swiper [config]="configSwiper" [(index)]="index" class="row" *ngIf="colecciones">
+                <div class="swiper-slide" *ngFor="let colection of colecciones">
+                    <div class="col-12 pl-3 pb-3 pr-3 pl-md-5 pb-md-2 pr-md-5 bg-3">
+                        <div class="slider-blog-w">
+                            <p class="title-coleccion text-left font-light d-none d-md-block mt-5 mb-5" style="text-transform: uppercase;"><img class="icono_coleccion" [src]="colection.icon">{{ colection.name }}</p>
+                            <div class="slider-ofertas">
+                                <div class="wrap">
+                                    <a class="btn-6 float-right" style="text-transform:uppercase;">ver colección<span></span></a>
+                                </div>
+                                <div class="clearfix"></div>
+                                <p class="p-term">{{ colection.description }}</p>
+                                <div class="portada-coleccion text-center" [ngStyle]="{'background-image': 'url(' + colection.portada + ')'}" style="height: 300px">
+                                    <p class="d-block d-md-none text-article">{{ colection.name }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </swiper>
+        </div>
+        <div class="col-12 col-md-3 order-1 orden-md-2 text-right p-5 bg-3" *ngIf="colecciones">
+            <p class="title-section text-right mb-2 mb-md-5">Tus zapatos <br>te definen</p>
+            <p class="p-style">Encuentra los zapatos que te identifiquen</p>
+            <div class="btns-slider-1">
+                <div class="btn-slider-l swiper-button-prev-p-2 "><i class="fas fa-chevron-left"></i></div>
+                <div class="btn-slider-r swiper-button-next-p-2"><i class="fas fa-chevron-right"></i></div>
+            </div>
+        </div>
+    </div>
+</div>

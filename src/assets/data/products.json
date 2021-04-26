@@ -1,0 +1,251 @@
+[{
+  "id": 1,
+  "title": "trim dress",
+  "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
+  "type": "fashion",
+  "brand": "nike",
+  "collection": ["new products"],
+  "category": "Women",
+  "price": 145,
+  "sale": true,
+  "discount": "40",
+  "stock": 5,
+  "new": true,
+  "tags": [
+      "new",
+      "s",
+      "m",
+      "yellow",
+      "white",
+      "pink",
+      "nike"
+  ],
+  "variants": [{
+          "variant_id": 101,
+          "id": 1,
+          "sku": "sku1",
+          "size": "s",
+          "color": "yellow",
+          "image_id": 111
+      },
+      {
+          "variant_id": 102,
+          "id": 1,
+          "sku": "sku2",
+          "size": "s",
+          "color": "white",
+          "image_id": 112
+      },
+      {
+          "variant_id": 103,
+          "id": 1,
+          "sku": "sku3",
+          "size": "s",
+          "color": "pink",
+          "image_id": 113
+      },
+      {
+          "variant_id": 104,
+          "id": 1,
+          "sku": "sku4",
+          "size": "m",
+          "color": "yellow",
+          "image_id": 111
+      },
+      {
+          "variant_id": 105,
+          "id": 1,
+          "sku": "sku5",
+          "size": "m",
+          "color": "white",
+          "image_id": 112
+      },
+      {
+          "variant_id": 106,
+          "id": 1,
+          "sku": "sku5",
+          "size": "m",
+          "color": "pink",
+          "image_id": 113
+      },
+      {
+          "variant_id": 107,
+          "id": 1,
+          "sku": "sku1",
+          "size": "l",
+          "color": "yellow",
+          "image_id": 111
+      }
+  ],
+  "images": [{
+          "image_id": 111,
+          "id": 1,
+          "alt": "yellow",
+          "src": "assets/images/product/fashion/39.jpg",
+          "variant_id": [
+              101,
+              104
+          ]
+      },
+      {
+          "image_id": 112,
+          "id": 1,
+          "alt": "white",
+          "src": "assets/images/product/fashion/6.jpg",
+          "variant_id": [
+              102,
+              105
+          ]
+      },
+      {
+          "image_id": 113,
+          "id": 1,
+          "alt": "pink",
+          "src": "assets/images/product/fashion/25.jpg",
+          "variant_id": [
+              103,
+              106
+          ]
+      }
+  ]
+}, {
+  "id": 2,
+  "title": "belted dress",
+  "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
+  "type": "fashion",
+  "brand": "zara",
+  "collection": ["best sellers"],
+  "category": "Women",
+  "price": 185,
+  "sale": false,
+  "discount": "40",
+  "stock": 2,
+  "new": false,
+  "tags": [
+      "s",
+      "m",
+      "l",
+      "olive",
+      "navy",
+      "red",
+      "zara"
+  ],
+  "variants": [{
+          "variant_id": 201,
+          "id": 2,
+          "sku": "sku1",
+          "size": "s",
+          "color": "olive",
+          "image_id": 211
+      },
+      {
+          "variant_id": 202,
+          "id": 2,
+          "sku": "sku2",
+          "size": "s",
+          "color": "navy",
+          "image_id": 212
+      },
+      {
+          "variant_id": 203,
+          "id": 2,
+          "sku": "sku3",
+          "size": "s",
+          "color": "red",
+          "image_id": 213
+      },
+      {
+          "variant_id": 204,
+          "id": 2,
+          "sku": "sku4",
+          "size": "m",
+          "color": "olive",
+          "image_id": 211
+      },
+      {
+          "variant_id": 205,
+          "id": 2,
+          "sku": "sku4",
+          "size": "m",
+          "color": "navy",
+          "image_id": 212
+      },
+      {
+          "variant_id": 206,
+          "id": 2,
+          "sku": "sku4",
+          "size": "m",
+          "color": "red",
+          "image_id": 213
+      },
+      {
+          "variant_id": 207,
+          "id": 2,
+          "sku": "sku4",
+          "size": "l",
+          "color": "olive",
+          "image_id": 211
+      },
+      {
+          "variant_id": 208,
+          "id": 2,
+          "sku": "sku4",
+          "size": "l",
+          "color": "navy",
+          "image_id": 212
+      },
+      {
+          "variant_id": 209,
+          "id": 2,
+          "sku": "sku4",
+          "size": "l",
+          "color": "red",
+          "image_id": 213
+      }
+  ],
+  "images": [{
+          "image_id": 211,
+          "id": 2,
+          "alt": "olive",
+          "src": "assets/images/product/fashion/3.jpg",
+          "variant_id": [
+              201,
+              204,
+              207
+          ]
+      },
+      {
+          "image_id": 212,
+          "id": 2,
+          "alt": "navy",
+          "src": "assets/images/product/fashion/4.jpg",
+          "variant_id": [
+              202,
+              205,
+              208
+          ]
+      },
+      {
+          "image_id": 213,
+          "id": 2,
+          "alt": "pink",
+          "src": "assets/images/product/fashion/5.jpg",
+          "variant_id": [
+              203,
+              206,
+              209
+          ]
+      },
+      {
+          "image_id": 214,
+          "id": 2,
+          "alt": "pink",
+          "src": "assets/images/product/fashion/15.jpg",
+          "variant_id": [
+              201,
+              204
+          ]
+      }
+  ]
+}
+]

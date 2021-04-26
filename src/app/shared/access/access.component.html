@@ -1,0 +1,290 @@
+<div id="style-modales">
+
+    <div class="modal fade" id="perfilModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><div class="close-btn"></div></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row justify-content-center text-center border-style-2">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="registro-tab" data-toggle="tab" href="#registro" role="tab" aria-controls="registro" aria-selected="true">
+                                        <div class="name-item-categories">REGISTRO<br><span class="small">RÁPIDO</span></div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="ingreso-tab" data-toggle="tab" href="#ingreso" role="tab" aria-controls="ingreso" aria-selected="false">
+                                        <div class="name-item-categories">INGRESAR<br><span class="small">A MI CUENTA</span></div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="registro" role="tabpanel" aria-labelledby="registro-tab">
+                                <div class="row p-3 p-md-5">
+                                    <form id="form-01" [formGroup]="infoRegistroRapido" (ngSubmit)="formRegistroRapido()">
+                                        <div class="row">
+                                            <div class="form-group col-12 mb-5">
+
+                                                <label class="label-style-1 font-light">TU EMAIL</label><br>
+                                                <input formControlName="correo" class="form-control input-style-1 font-light" [class.input-invalid]="correoI" type="email" placeholder="@" required>
+                                                <small *ngIf="correoI" class="info-label mb-3 d-block" style="color: red;">Ingresa un correo válido</small>
+                                                <label class="label-style-1 font-light">CONTRASEÑA</label><br>
+                                                <input formControlName="pass" class="form-control input-style-1 font-light" [class.input-invalid]="passI" type="password" required>
+                                                <small *ngIf="passI" class="info-label mb-3 d-block" style="color: red;">Ingresa una contraseña válida</small>
+                                                <div class="info-label" style="letter-spacing: 1.8px">Al menos una mayuscula un numero un signo</div>
+                                                <div class="mt-4">
+                                                    <div class="round">
+                                                        <input type="checkbox" id="checkbox" />
+                                                        <label for="checkbox"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="c-label font-light" for="defaultCheck1">Deseo recibir información de katari shoes</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <button type="submit" form="form-01" class="btn-articulo w-100 p-4 text-center" style="text-transform:uppercase;">Registro</button>
+                                                <!--<div  class="btn-articulo p-4 text-center" style="text-transform:uppercase;">Registro</div>-->
+                                            </div>
+                                            <div class="col-6 text-center">
+                                                <p class="label-style-1 mb-2" style="letter-spacing: 0">Registró fácil con</p>
+                                                <div class="fb-btn"></div>
+                                                <div class="gl-btn"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 mt-3">
+                                            <div class="info-label">Usaremos estos datos para efectos de contacto y autenticación, puedes estar tranquila. Ver condiciones</div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="ingreso" role="tabpanel" aria-labelledby="ingreso-tab">
+                                <div *ngIf="!resPass" class="row animate__animated animate__fadeIn p-3 p-md-5">
+                                    <form id="loginModal" [formGroup]="datosLogin" (ngSubmit)="loginModal()">
+                                        <div class="row">
+                                            <div class="form-group col-12 mb-5">
+                                                <label class="label-style-1 font-light">Tu email</label><br>
+                                                <input formControlName="correoL" class="form-control input-style-1 font-light" [class.input-invalid]="correoL" type="text" placeholder="@" required>
+                                                <small *ngIf="correoL" class="info-label mb-3 d-block" style="color: red;">Ingresa un correo registrado</small>
+                                                <label class="label-style-1 font-light">Contraseña</label><br>
+                                                <input formControlName="passL" class="form-control input-style-1 font-light" [class.input-invalid]="passL" type="password" required>
+                                                <small *ngIf="passL" class="info-label mb-3" style="color: red;">Contraseña incorrecta</small>
+                                                <div (click)="restablecerPass()" style="cursor: pointer;" class="info-label text-right d-block">Olvidaste tu contraseña?</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <button type="submit" class="btn-articulo p-4 mt-3 w-100 text-center" style="text-transform:uppercase;">Ingreso</button>
+                                                <!--<div data-toggle="modal" data-target="#cuentaModal" class="btn-articulo p-4 text-center" style="text-transform:uppercase;">Ingreso</div>-->
+                                            </div>
+                                            <div class="col-6 text-center">
+                                                <p class="label-style-1 mb-2 mt-3" style="letter-spacing: 0">Registró fácil con</p>
+                                                <div class="fb-btn"></div>
+                                                <div class="gl-btn"></div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div *ngIf="resPass" class="row p-3 p-md-5">
+                                    <div class="col-12">
+                                        <div (click)="restablecerPass()" class="btn-back"><i class="fas fa-chevron-left"></i></div>
+                                    </div>
+                                    <form [formGroup]="correoReset" (ngSubmit)="resetPass()">
+                                        <div class="row">
+                                            <div class="form-group col-12 mb-5">
+                                                <div class="c-label font-light mb-3" for="defaultCheck1">Ingresa el correo registrado para restableciemiento de contraseña</div>
+                                                <label class="label-style-1 font-light">TU EMAIL</label><br>
+                                                <input formControlName="emailReset" class="form-control input-style-1 font-light mb-1" [class.input-invalid]="correoR" type="email" placeholder="@" required>
+                                                <small *ngIf="correoR" class="info-label mb-3" style="color: red;">Ingresa un correo registrado</small>
+                                                <div class="col-12 mt-3">
+                                                    <button type="submit" class="btn-articulo w-100 p-4 text-center" style="text-transform:uppercase;">Enviar</button>
+                                                </div>
+                                                <!--<div  class="btn-articulo p-4 text-center" style="text-transform:uppercase;">Registro</div>-->
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="notificacionModal">
+        <div id="popup-1" class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container-fluid p-4 p-md-5">
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <div class="col-12 title-section mt-4 text-center">¡Espera!</div>
+                                <div><img src="assets/images/icono-llenar.png"></div>
+                                <div class="item-cuenta mt-3">Debes completar todos los datos de registro para pagar</div>
+                                <div data-dismiss="modal" class="btn-articulo mt-3 p-4 text-center" style="text-transform:uppercase;">Entendido</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="carritoModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><div class="close-btn"></div></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid p-4 p-md-5">
+                        <div class="row">
+                            <div class="col-12 title-section pb-5 text-center" >Bolsa de compras </div>
+                            <div class="col-12 border-style-2" hidden>
+                                <div class="row text-center">
+                                    <div class="col-4 p-2 p-md-4">
+                                        <img class="portada-carrito" src="assets/images/product.png">
+                                    </div>
+                                    <div class="col-4 p-2 p-md-4 text-center align-self-center">
+                                        <p class="font-light">Sonia</p>
+                                        <p class="font-light" style="color:#FFB7A5;">
+                                            $158.000</p>
+                                        <p class="font-light">Talla 27</p>
+                                    </div>
+                                    <div class="col-4 p-2 p-md-4 text-center">
+                                        <div class="iconos-carrito">
+                                            <i class="far fa-heart float-left"></i>
+                                            <i class="fas fa-trash float-right"></i>
+                                            <div class="clearfix"></div>
+                                            <p class="font-light mt-3">Unidades</p>
+                                            <select>
+                             <option selected disabled>1</option>
+                             <option>2</option>
+                             <option>3</option>
+                             <option>4</option>
+                           </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row text-center" *ngFor="let item of products">
+                              <div class="col-4 p-2 p-md-4">
+                                <img class="portada-carrito" [src]="item.imagePath">
+                              </div>
+                              <div class="col-4 p-2 p-md-4 text-center align-self-center">
+                                <p class="font-light">{{item.name}}</p>
+                                <p class="font-light" style="color:#FFB7A5;">
+                                {{item.price.taxIncludePrice}}</p>
+                                <p class="font-light">Talla 27</p>
+                              </div>
+                              <div class="col-4 p-2 p-md-4 text-center">
+                                <div class="iconos-carrito">
+                                  <i class="far fa-heart float-left"></i>
+                                  <i class="fas fa-trash float-right" (click)="removeItem(item)"></i>
+                                  <div class="clearfix"></div>
+                                  <p class="font-light mt-3">Unidades</p>
+                                  <select>
+                                   <option selected disabled value="1">1</option>
+                                   <option value="2">2</option>
+                                   <option value="2">3</option>
+                                   <option value="2">4</option>
+                                 </select>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-12 mt-5">
+                                <div class="btn-articulo p-4 text-center" style="text-transform:uppercase;">Pagar ahora</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="cuentaModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><div class="close-btn"></div></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid p-5">
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <div class="col-12 title-section pb-5 text-center">Tu cuenta</div>
+                                <div class="item-cuenta font-light">Mis datos</div>
+                                <div class="item-cuenta font-light">Mis diseños favoritos</div>
+                                <div class="item-cuenta font-light">Seguimiento a tus pedidos</div>
+                                <div class="item-cuenta font-light">Mi bolsa de compra</div>
+                                <div class="btn-articulo mt-5 p-4 text-center" style="text-transform:uppercase;">Salir</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="favoritosModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><div class="close-btn"></div></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid p-4 p-md-5">
+                        <div class="row">
+                            <div class="col-12 title-section pb-5 text-center">Favoritos</div>
+                            <div class="col-12 border-style-2">
+                                <div class="row text-center" *ngFor="let item of productsWishlist">
+                                    <div class="col-4 p-1 p-md-4">
+                                        <img class="portada-carrito" [src]="item.imagePath">
+                                    </div>
+                                    <div class="col-4 p-1 p-md-4 text-center align-self-center">
+                                        <p class="font-light">{{item.name}}</p>
+                                        <p class="font-light" style="color:#FFB7A5;">
+                                            ${{item.price.taxIncludePrice}}</p>
+                                        <p class="font-light">Talla 27</p>
+                                    </div>
+                                    <div class="col-4 p-1 p-md-4 text-center">
+                                        <div class="iconos-carrito">
+                                            <i class="far fa-heart float-left"></i>
+                                            <i class="fas fa-trash float-right" (click)="removeItemWishlist(item)"></i>
+                                            <div class="clearfix"></div>
+                                            <div class="btn-articulo p-2 mt-4 text-center" style="text-transform:uppercase;">Pagar ahora</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="anadidoModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><div class="close-btn"></div></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid p-5">
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <div class="col-12 title-section pb-5 text-center">Tu Producto ha sido añadido</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

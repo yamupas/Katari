@@ -1,0 +1,38 @@
+<div class="{{ clase }}">Crear mi diseño</div>
+<mat-select (selectionChange)="irPersonalizador($event.value)" panelClass="mat-select-panel" hidden >
+  <mat-option>Seleccionar modelo</mat-option>
+  <mat-option value="zapatillas">Zapatillas
+    <img with="20" height="10"  src="assets/images/icono_1.svg">
+
+  </mat-option>
+  <mat-option value="botines">Botines
+    <img with="10" height="10"  src="assets/images/icono_2.svg">
+
+  </mat-option>
+  <mat-option value="mocasines">Mocasines
+    <img with="10" height="10"   src="assets/images/icono_3.svg">
+
+  </mat-option>
+  <mat-option value="suecos">Suecos
+    <img with="10" height="10"  src="assets/images/icono_4.svg">
+
+  </mat-option>
+  <mat-option value="casual">Casual
+    <img with="20" height="10"  src="assets/images/icono_5.svg">
+
+  </mat-option>
+
+
+</mat-select>
+<select (change)="irPersonalizador($event.target.value)">
+    <option value="" selected="selected">Seleccionar modelo</option>
+    <option value="zapatillas">Zapatillas<i class="fas fa-weight-hanging"></i>
+      <img with="10" height="10"   src="assets/images/icono_3.svg">
+    </option>
+    <option value="botines">Botines
+      <img with="10" height="10"  src="assets/images/icono_2.svg">
+    </option>
+    <option value="mocasines">Mocasines<i class="fas fa-weight-hanging"></i></option>
+    <option value="suecos">Suecos<i class="fas fa-weight-hanging"></i></option>
+    <option value="casual">Casual<i class="fas fa-weight-hanging"></i></option>
+</select>

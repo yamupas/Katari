@@ -1,0 +1,270 @@
+<div class="container-fluid container-lg formulario-p mb-5">
+    <div class="row p-3 p-md-5">
+        <div class="col-12 col-md-7 text-center p-md-5">
+            <div class="title-form mb-5">
+                <h3 class="float-left"><span>Bolsa</span> <br> de compras</h3>
+                <i class="fas fa-shopping-bag float-left"></i>
+            </div>
+            <div class="row justify-content-center text-center border-style-2">
+                <ul class="nav nav-tabs" id="myTab-2" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="registro-p-tab" data-toggle="tab" href="#registro-p" role="tab" aria-controls="registro-p" aria-selected="true">
+                            <div class="name-item-categories">Registro<br><span class="small"></span></div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="ingreso-p-tab" data-toggle="tab" href="#ingreso-p" role="tab" aria-controls="ingreso-p" aria-selected="false">
+                            <div class="name-item-categories" style="line-height: 13px">Ingresar<br><span class="small">A mi cuenta</span></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content" id="myTabContent-2">
+                <div class="tab-pane fade show active" id="registro-p" role="tabpanel" aria-labelledby="registro-p-tab">
+                    <form [formGroup]="registroCompras" (ngSubmit)="regCompras()">
+                        <div class="row mt-5 text-left">
+                            <div class="col-6">
+                                <label class="label-style-1 font-light">Nombre</label><br>
+                                <input [class.input-invalid]="nombreI" formControlName="nombre" class="input-style-1 font-light" type="text" required>
+                            </div>
+                            <div class="col-6">
+                                <label class="label-style-1 font-light">Apellidos</label><br>
+                                <input [class.input-invalid]="apellidoI" formControlName="apellido" class="input-style-1 font-light" type="text" required>
+                            </div>
+                        </div>
+                        <div class="row mt-3 text-left">
+                            <div class="col-12 col-md-4">
+                                <label class="label-style-1 font-light">Email</label><br>
+                                <input [class.input-invalid]="correoI" formControlName="correo" class="input-style-1 font-light" type="text" required>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <label class="label-style-1 font-light">Celular</label><br>
+                                <input [class.input-invalid]="celularI" formControlName="celular" class="input-style-1 font-light" type="text" required>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <label class="label-style-1 font-light">Ciudad</label><br>
+                                <select class="select-form">
+                                    <option>Bogotá</option>
+                                    <option>Medellin</option>
+                                    <option>Pasto</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mt-3 text-left">
+                            <div class="col-4">
+                                <label class="label-style-1 font-light">Dirección</label><br>
+                                <select class="select-form">
+                                    <option>Carrera</option>
+                                    <option>Diagonal</option>
+                                    <option>Calle</option>
+                                </select>
+                            </div>
+                            <div class="col-4">
+                                <br><input [class.input-invalid]="direccion1I" formControlName="direccion1" class="input-style-1 font-light" type="text" required>
+                            </div>
+                            <div class="col-4">
+                                <br><input [class.input-invalid]="direccion2I" formControlName="direccion2" class="input-style-1 font-light" type="text" placeholder="#" required>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <input formControlName="direccion3" class="input-style-1 font-light" type="text" placeholder="Agrega alguna especificación" required>
+                            </div>
+                        </div>
+                        <div class="row mt-5 text-left">
+                            <div class="col-6">
+                                <label class="label-style-1 font-light">Contraseña</label><br>
+                                <input [class.input-invalid]="passI" formControlName="pass" class="input-style-1 font-light" type="password" required>
+                            </div>
+                            <div class="col-6">
+                                <label class="label-style-1 font-light">Repetir</label><br>
+                                <input [class.input-invalid]="passI" formControlName="passR" class="input-style-1 font-light" type="password" required>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12 text-left mb-3">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                <label class="form-check-label font-light" for="defaultCheck1">Deseo recibir información de katari shoes</label>
+                            </div>
+                            <div class="col-6">
+                                <button class="btn-articulo p-4 text-center" style="text-transform:uppercase;">Registro</button>
+                                <!--<div class="btn-articulo p-4 text-center" style="text-transform:uppercase;">Registro</div>-->
+                            </div>
+                            <div class="col-6 text-center">
+                                <p class="label-style-1 mb-2" style="letter-spacing: 0">Registro fácil con</p>
+                                <i class="fab fa-facebook icono-style-1 mr-3"></i>
+                                <i class="fab fa-google  icono-style-1 ml-3"></i>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="ingreso-p" role="tabpanel" aria-labelledby="ingreso-p-tab">
+                    <div class="row mt-5 text-left">
+                        <div class="col-6">
+                            <label class="label-style-1 font-light">Email</label><br>
+                            <input class="input-style-1 font-light" type="email">
+                        </div>
+                        <div class="col-6">
+                            <label class="label-style-1 font-light">Contraseña</label><br>
+                            <input class="input-style-1 font-light" type="password">
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-6">
+                            <div data-toggle="modal" data-target="#notificacionModal" class="btn-articulo p-4 text-center" style="text-transform:uppercase;">Ingreso</div>
+                        </div>
+                        <div class="col-6 text-center">
+                            <p class="label-style-1 mb-2" style="letter-spacing: 0">O ingresa con</p>
+                            <i class="fab fa-facebook icono-style-1 mr-3"></i>
+                            <i class="fab fa-google  icono-style-1 ml-3"></i>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-6">
+                            <div class="perfil-p"></div>
+                            <p class="user-p">Juliana Becerra</p>
+                        </div>
+                        <div class="col-6 info-p">
+                            <p>Bogotá</p>
+                            <p>Carrera 82 No, 82d 26</p>
+                            <p>Juliana@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="row mt-3 text-left">
+                        <div class="col-4">
+                            <label class="label-style-1 font-light">Dirección</label><br>
+                            <select class="select-form">
+                    <option>Carrera</option>
+                    <option>Diagonal</option>
+                    <option>Calle</option>
+                </select>
+                        </div>
+                        <div class="col-4">
+                            <br><input class="input-style-1 font-light" type="text">
+                        </div>
+                        <div class="col-4">
+                            <br><input class="input-style-1 font-light" type="text" placeholder="#">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <input class="input-style-1 font-light" type="text" placeholder="Agrega alguna especificación">
+                        </div>
+                        <div class="col-12 mt-5">
+                            <div class="btn-articulo p-4 text-center d-inline mt-3" style="text-transform:uppercase;">Cambiar dirección</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-5 p-4 bg-6 mt-5">
+            <!--Productos-->
+            <div class="col-6 col-sm-6 col-lg-4 item-product p-2 mt-5 mb-5">
+                <div class="cont-izq float-left btn-hover" style="color:#FFB7A5;">
+                    <i class="far fa-heart float-left pr-2 pr-md-4 border-style-1"></i>
+                    <i class="fas fa-shopping-bag float-left ml-2 ml-md-4"></i>
+                </div>
+                <div class="cont-der float-right btn-hover product-social" style="color:#AFAFAF;">
+                    <i class="fab fa-facebook-f pr-2 pr-md-4 border-style-1"></i>
+                    <i class="fab fa-pinterest-p float-right mt-1 ml-2 ml-md-4"></i>
+                </div>
+                <div class="text-center">
+                    <p class="font-light mt-4 mt-md-5">Sonia</p>
+                    <p class="font-light" style="color:#FFB7A5;">$158.000</p>
+                    <img class="img-product mt-4 mb-4" src="assets/images/product.png">
+                </div>
+                <div class="cont-izq float-none float-md-left btn-hover" style="color:#FFB7A5;">
+                    <select class="talla-product">
+                    <option selected disabled>Talla</option>
+                    <option>38</option>
+                    <option>39</option>
+                    <option>40</option>
+                    <option>41</option>
+                </select>
+                </div>
+                <div class="cont-der float-right d-none d-md-block btn-hover" style="color:#FFB7A5;">
+                    <img src="assets/images/360.svg">
+                </div>
+                <div class="d-block d-md-none mt-2">
+                    <p class="float-left">Ponle tu toque</p>
+                    <img class="ml-2 pl-1 pt-2 rounded-circle" src="assets/images/draw-a-picture.svg" style="background-color: #D6824E;width:25px;">
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-lg-4 item-product p-2 mt-5 mb-5">
+                <div class="cont-izq float-left btn-hover" style="color:#FFB7A5;">
+                    <i class="far fa-heart float-left pr-2 pr-md-4 border-style-1"></i>
+                    <i class="fas fa-shopping-bag float-left ml-2 ml-md-4"></i>
+                </div>
+                <div class="cont-der float-right btn-hover product-social" style="color:#AFAFAF;">
+                    <i class="fab fa-facebook-f pr-2 pr-md-4 border-style-1"></i>
+                    <i class="fab fa-pinterest-p float-right mt-1 ml-2 ml-md-4"></i>
+                </div>
+                <div class="text-center">
+                    <p class="font-light mt-4 mt-md-5">Sonia</p>
+                    <p class="font-light" style="color:#FFB7A5;">$158.000</p>
+                    <img class="img-product mt-4 mb-4" src="assets/images/product.png">
+                </div>
+                <div class="cont-izq float-none float-md-left btn-hover" style="color:#FFB7A5;">
+                    <select class="talla-product">
+                    <option selected disabled>Talla</option>
+                    <option>38</option>
+                    <option>39</option>
+                    <option>40</option>
+                    <option>41</option>
+                </select>
+                </div>
+                <div class="cont-der float-right d-none d-md-block btn-hover" style="color:#FFB7A5;">
+                    <img src="assets/images/360.svg">
+                </div>
+                <div class="d-block d-md-none mt-2">
+                    <p class="float-left">Ponle tu toque</p>
+                    <img class="ml-2 pl-1 pt-2 rounded-circle" src="assets/images/draw-a-picture.svg" style="background-color: #D6824E;width:25px;">
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-lg-4 item-product p-2 mt-5 mb-5">
+                <div class="cont-izq float-left btn-hover" style="color:#FFB7A5;">
+                    <i class="far fa-heart float-left pr-2 pr-md-4 border-style-1"></i>
+                    <i class="fas fa-shopping-bag float-left ml-2 ml-md-4"></i>
+                </div>
+                <div class="cont-der float-right btn-hover product-social" style="color:#AFAFAF;">
+                    <i class="fab fa-facebook-f pr-2 pr-md-4 border-style-1"></i>
+                    <i class="fab fa-pinterest-p float-right mt-1 ml-2 ml-md-4"></i>
+                </div>
+                <div class="text-center">
+                    <p class="font-light mt-4 mt-md-5">Sonia</p>
+                    <p class="font-light" style="color:#FFB7A5;">$158.000</p>
+                    <img class="img-product mt-4 mb-4" src="assets/images/product.png">
+                </div>
+                <div class="cont-izq float-none float-md-left btn-hover" style="color:#FFB7A5;">
+                    <select class="talla-product">
+                    <option selected disabled>Talla</option>
+                    <option>38</option>
+                    <option>39</option>
+                    <option>40</option>
+                    <option>41</option>
+                </select>
+                </div>
+                <div class="cont-der float-right d-none d-md-block btn-hover" style="color:#FFB7A5;">
+                    <img src="assets/images/360.svg">
+                </div>
+                <div class="d-block d-md-none mt-2">
+                    <p class="float-left">Ponle tu toque</p>
+                    <img class="ml-2 pl-1 pt-2 rounded-circle" src="assets/images/draw-a-picture.svg" style="background-color: #D6824E;width:25px;">
+                </div>
+            </div>
+            <!--Fin de productos-->
+            <div class="row">
+                <div class="col text-center">
+                    <label class="label-style-1 font-light mt-5">Añadir código promocional</label><br>
+                    <input class="input-style-1 font-light" type="text">
+                    <div class="precio-form-p">Total: $189.999</div>
+                    <div>Este precio incluye el envío y los descuentos aplicados</div>
+                    <div class="btn-articulo p-4 text-center mt-3 mb-3" style="text-transform:uppercase;">Pagar ahora</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col mt-5">
+            <div class="p-p align-self-center"><i class="fas fa-chevron-left mr-3"></i>Regresar y sigue comprando</div>
+        </div>
+    </div>
+</div>
+
+<app-newsletter></app-newsletter>

@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2 col-xs-12 offset-xs-0">
+            <div class="col-12 mt-5 mb-5">
+                <div class="title-section text-center">Contáctanos</div>
+            </div>
+            <div class="col-12 name-item-categories small-p mb-3 mt-3">
+                Estaremos felices de responder a cualquier inquietud que puedas tener acerca de Katari Shoes
+            </div>
+            <form [formGroup]="formC" (ngSubmit)="formContacto()">
+
+
+                <div class="form-group row mt-5 text-left p-5">
+                    <div class="col-12">
+                        <label class="label-style-1 font-light">Nombre</label><br>
+                        <input [class.input-invalid]="nombreI" formControlName="nombre" class="form-control input-style-1 font-light" type="text" required>
+                        <small *ngIf="nombreI" class="info-label mb-3 d-block" style="color: red;">Ingresa un nombre</small>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <label class="label-style-1 font-light">Email</label><br>
+                        <input [class.input-invalid]="correoI" formControlName="correo" class="form-control input-style-1 font-light" type="email" placeholder="@" required>
+                        <small *ngIf="correoI" class="info-label mb-3 d-block" style="color: red;">Ingresa un correo válido</small>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <label class="label-style-1 font-light">Celular</label><br>
+                        <input [class.input-invalid]="celularI" formControlName="celular" class="form-control input-style-1 font-light" type="text" required>
+                        <small *ngIf="celularI" class="info-label mb-3 d-block" style="color: red;">Ingresa un número celular</small>
+                    </div>
+                    <div class="col-12">
+                        <label class="label-style-1 font-light">Mensaje</label><br>
+                        <textarea [class.input-invalid]="mensajeI" formControlName="mensaje" class="form-control w-100 input-style-1 font-light" style="resize: none;" rows="5" required></textarea>
+                        <small *ngIf="mensajeI" class="info-label mb-3 d-block" style="color: red;">Ingresa un mensaje</small>
+                    </div>
+
+                    <div class="col-12 text-center">
+                        <button class="btn-articulo pt-3 pb-3 pl-5 pr-5 text-center d-inline-block " style="text-transform:uppercase;">Guardar</button>
+                        <!--<div data-toggle="modal" data-target="#notificacionModal" class="btn-articulo pt-3 pb-3 pl-5 pr-5 text-center d-inline-block" style="text-transform:uppercase;">Guardar</div>-->
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-8 offset-md-2 col-xs-12 offset-xs-0">
+            <div class="input-style-1"></div>
+            <div class="row">
+                <div class="col-6 mt-5 mb-5 text-center"><img class="pr-2" src="assets/images/mailB.svg"> {{ datosContacto.correo }}</div>
+                <div class="col-6 mt-5 mb-5 text-center"><img class="pr-2" src="assets/images/wppB.svg"> {{ datosContacto.whatsapp }}</div>
+                <div class="col-6 mt-5 mb-5 text-center">
+                    <a href="https://www.instagram.com/katarishoes/" target="_blank"><img class="pr-2" src="assets/images/igB.svg"> {{ datosContacto.instagram }}</a>
+                </div>
+                <div class="col-6 mt-5 mb-5 text-center">
+                    <a href="https://www.facebook.com/Katari-Shoes-658702691221866/" target="_blank"><img class="pl-1 pr-3" src="assets/images/fbB.svg"> {{ datosContacto.facebook }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-newsletter></app-newsletter>

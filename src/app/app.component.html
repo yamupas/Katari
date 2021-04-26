@@ -1,0 +1,189 @@
+<app-header></app-header>
+<app-navbar></app-navbar>
+<router-outlet></router-outlet>
+<app-footer></app-footer>
+
+
+    <!--Base Modal-->
+    <div id="style-modales">
+
+        <div class="modal fade" id="notificacionModal">
+          <div id="popup-1" class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                  <div class="container-fluid p-4 p-md-5">
+                      <div class="row">
+                        <div class="col-12 text-center">
+                          <div class="col-12 title-section mt-4 text-center">¡Espera!</div>
+                         <div><img src="assets/images/icono-llenar.png"></div>
+                          <div class="item-cuenta mt-3">Debes completar todos los datos de registro para pagar</div>
+                          <div data-dismiss="modal" class="btn-articulo mt-3 p-4 text-center" style="text-transform:uppercase;">Entendido</div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="carritoModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><i class="fas fa-times"></i></button>
+              </div>
+              <div class="modal-body" *ngIf="products">
+                  <div class="container-fluid p-4 p-md-5">
+                      <div class="row">
+
+
+
+                        <div class="col-12 title-section pb-5 text-center">Bolsa de compras
+
+
+                        </div>
+                        <div class="col-12 border-style-2">
+                          <div class="row text-center" hidden>
+                            <div class="col-4 p-2 p-md-4">
+                              <img class="portada-carrito" src="assets/images/product.png">
+                            </div>
+                            <div class="col-4 p-2 p-md-4 text-center align-self-center">
+                              <p class="font-light">Sonia</p>
+                              <p class="font-light" style="color:#FFB7A5;">
+                              $158.000</p>
+                              <p class="font-light">Talla 27</p>
+                            </div>
+                            <div class="col-4 p-2 p-md-4 text-center">
+                              <div class="iconos-carrito">
+                                <i class="far fa-heart float-left"></i>
+                                <i class="fas fa-trash float-right"></i>
+                                <div class="clearfix"></div>
+                                <p class="font-light mt-3">Unidades</p>
+                                <select>
+                                 <option selected disabled>1</option>
+                                 <option>2</option>
+                                 <option>3</option>
+                                 <option>4</option>
+                               </select>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row text-center" *ngFor="let item of products">
+                            <div class="col-4 p-2 p-md-4">
+                              <img class="portada-carrito" src="assets/images/product.png">
+                            </div>
+                            <div class="col-4 p-2 p-md-4 text-center align-self-center">
+                              <p class="font-light">{{item.name}}</p>
+                              <p class="font-light" style="color:#FFB7A5;">
+                              {{item.price.taxIncludePrice}}</p>
+                              <p class="font-light">Talla 27</p>
+                            </div>
+                            <div class="col-4 p-2 p-md-4 text-center">
+                              <div class="iconos-carrito">
+                                <i class="far fa-heart float-left"></i>
+                                <i class="fas fa-trash float-right"></i>
+                                <div class="clearfix"></div>
+                                <p class="font-light mt-3">Unidades</p>
+                                <select>
+                                 <option selected disabled>1</option>
+                                 <option>2</option>
+                                 <option>3</option>
+                                 <option>4</option>
+                               </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 mt-5">
+                            <div class="btn-articulo p-4 text-center" style="text-transform:uppercase;">Pagar ahora</div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="cuentaModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><i class="fas fa-times"></i></button>
+              </div>
+              <div class="modal-body">
+                  <div class="container-fluid p-5">
+                      <div class="row">
+                        <div class="col-12 text-center">
+                          <div class="col-12 title-section pb-5 text-center">Tu cuenta</div>
+                          <div class="item-cuenta font-light">Mis datos</div>
+                          <div class="item-cuenta font-light">Mis diseños favoritos</div>
+                          <div class="item-cuenta font-light">Seguimiento a tus pedidos</div>
+                          <div class="item-cuenta font-light">Mi bolsa de compra</div>
+                          <div class="btn-articulo mt-5 p-4 text-center" style="text-transform:uppercase;">Salir</div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="favoritosModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><i class="fas fa-times"></i></button>
+              </div>
+              <div class="modal-body">
+                  <div class="container-fluid p-4 p-md-5">
+                      <div class="row">
+                        <div class="col-12 title-section pb-5 text-center">Favoritos</div>
+                        <div class="col-12 border-style-2">
+                          <div class="row text-center">
+                            <div class="col-4 p-1 p-md-4">
+                              <img class="portada-carrito" src="assets/images/product.png">
+                            </div>
+                            <div class="col-4 p-1 p-md-4 text-center align-self-center">
+                              <p class="font-light">Sonia</p>
+                              <p class="font-light" style="color:#FFB7A5;">
+                              $158.000</p>
+                              <p class="font-light">Talla 27</p>
+                            </div>
+                            <div class="col-4 p-1 p-md-4 text-center">
+                              <div class="iconos-carrito">
+                                <i class="far fa-heart float-left"></i>
+                                <i class="fas fa-trash float-right"></i>
+                                <div class="clearfix"></div>
+                                <div class="btn-articulo p-2 mt-4 text-center" style="text-transform:uppercase;">Pagar ahora</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="anadidoModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><i class="fas fa-times"></i></button>
+              </div>
+              <div class="modal-body">
+                  <div class="container-fluid p-5">
+                      <div class="row">
+                        <div class="col-12 text-center">
+                          <div class="col-12 title-section pb-5 text-center">Tu Producto ha sido añadido</div>
+
+                        </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <!--Modales-->

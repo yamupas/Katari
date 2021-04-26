@@ -1,0 +1,96 @@
+<footer>
+    <div class="container-fluid footer pt-5 pb-5">
+        <div class="row mb-3">
+            <div class="col text-center">
+                <img src="assets/images/logo.png">
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-4 col-lg-2 text-center text-md-left">
+                <ul class="list-group list-footer">
+                    <li class="list-group-item">
+                        <img class="pr-2" src="assets/images/mail.svg"> {{ datosContacto.correo }}
+                    </li>
+                    <li class="list-group-item">
+                        <img class="pr-2" src="assets/images/whatsapp.svg"> {{ datosContacto.whatsapp }}
+                    </li>
+                    <li class="list-group-item">
+                        <a href="https://www.instagram.com/katarishoes/" target="_blank"><img class="pr-2" src="assets/images/Instagram.svg"> {{ datosContacto.instagram }}</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="https://www.facebook.com/Katari-Shoes-658702691221866/" target="_blank"><img class="pl-1 pr-3" src="assets/images/Facebook.svg"> {{ datosContacto.facebook }}</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-4 text-center">
+                <ul class="list-group list-footer">
+                    <li class="list-group-item">
+                        Inicio
+                    </li>
+                    <li data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" class="list-group-item" style="cursor: pointer;">
+                        Fabrica tus zapatos<i class="ml-2 fas fa-chevron-down"></i>
+                        <ul class="list-gruop list-footer-2 collapse" id="collapseExample">
+                            <li class="list-group-item small">
+                                <a routerLink="/personalizador/zapatillas">Zapatillas</a>
+                            </li>
+                            <li class="list-group-item small">
+                                <a routerLink="/personalizador/botines">Bontines</a>
+                            </li>
+                            <li class="list-group-item small">
+                                <a routerLink="/personalizador/mocasines">Mocasines</a>
+                            </li>
+                            <li class="list-group-item small">
+                                <a routerLink="/personalizador/sueco">Sueco</a>
+                            </li>
+                            <li class="list-group-item small">
+                                <a routerLink="/personalizador/casual">Casual</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item">
+                        <a routerLink="/colecciones">Colecciones</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a routerLink="/conocenos">Conócenos</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a routerLink="/contactanos">Contáctanos</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a routerLink="/blog"> Blog </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-2 text-center text-md-left">
+                <ul class="list-group list-footer">
+                    <li class="list-group-item" *ngIf="sesion.user">
+                        <i class="fas fa-chevron-right"></i> Mi cuenta
+                    </li>
+                    <li class="list-group-item">
+                        <i class="fas fa-chevron-right"></i> Carrito de compras
+                    </li>
+                    <li class="list-group-item">
+                        <i class="fas fa-chevron-right"></i>
+                        <a routerLink="legal/terminos">Términos y condiciones</a>
+                    </li>
+                    <li class="list-group-item">
+                        <i class="fas fa-chevron-right"></i><a routerLink="legal/terminos"> Condiciones de compra</a>
+                    </li>
+                    <li class="list-group-item">
+                        <i class="fas fa-chevron-right"></i><a routerLink="legal/datos-personales">Tratamiento de datos</a>
+                    </li>
+                    <li class="list-group-item">
+                        <i class="fas fa-chevron-right"></i><a routerLink="legal/devoluciones">Devoluciones y cambios</a>
+                    </li>
+                    <li class="list-group-item">
+                        <i class="fas fa-chevron-right"></i><a routerLink="legal/avisos-legales">Avisos legales </a>
+                    </li>
+                    <li class="list-group-item">
+                        <i class="fas fa-chevron-right"></i> Conoce tu talla
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24">
+  <g id="Grupo_971" data-name="Grupo 971" transform="translate(-458 -2613)">
+    <rect id="Rectángulo_128" data-name="Rectángulo 128" width="25" height="24" rx="12" transform="translate(458 2613)" fill="#a27ee5"/>
+    <g id="rotating-circular-arrow" transform="translate(461.408 2621.637)">
+      <path id="Trazado_830" data-name="Trazado 830" d="M19.9,47.232c0-2.528-4.37-4.506-9.949-4.506S0,44.705,0,47.232a.321.321,0,0,0,.642,0c0-2.1,4.263-3.865,9.307-3.865s9.307,1.77,9.307,3.865c0,2.078-4.2,3.836-9.194,3.862L11.2,49.953a.321.321,0,1,0-.454-.454L8.83,51.418l1.92,1.92a.322.322,0,0,0,.454,0,.321.321,0,0,0,0-.454l-1.148-1.148C15.582,51.709,19.9,49.743,19.9,47.232Z" transform="translate(0 -42.726)" fill="#fdfcfe"/>
+    </g>
+  </g>
+</svg>

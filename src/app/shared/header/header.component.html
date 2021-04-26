@@ -1,0 +1,58 @@
+<header>
+    <div id="menu" class="container-fluid">
+        <div class="row justify-content-end">
+            <div class="col-5 col-md-3 col-lg-2 text-center">
+                <a routerLink="/"><img src="assets/images/logo.png" class="img-fluid align-self-center"></a>
+            </div>
+            <div class="col-7 col-md-8 col-lg-5 align-self-end" style="color:white">
+                <div class="row justify-content-center justify-content-md-end justify-content-xl-center">
+                    <div data-toggle="modal" data-target="#perfilModal" class="col-3 col-sm-4 col-md-4 col-lg-4 col-xl-3 align-self-end menu-item">
+                        <div class="float-left mr-1 icon-menu" style="background-image:url('assets/images/nurse.svg')"></div>
+                        <p class="name-profile text-menu">Ingresar</p>
+                    </div>
+                    <div data-toggle="modal" data-target="#carritoModal" class="col-5 col-sm-3 col-md-2 align-self-end menu-item">
+                        <div class="icon-bolsa"><img class="item-menu" src="assets/images/bolsa.svg">
+                            <p class=" text-menu">0</p>
+                        </div>
+                    </div>
+                    <div data-toggle="modal" data-target="#favoritosModal" class="col-3 col-sm-3 col-md-2 col-lg-3 col-xl-2 menu-item ">
+                        <div class="icon-menu" style="background-image:url('assets/images/heart.svg')"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Menu Responsive-->
+    </div>
+    <div id="menu-responsive" class="container-fluid container-xl">
+        <div class="row">
+            <div class="col-5 col-md-3 col-lg-2 text-center">
+                <a routerLink="/"><img src="assets/images/logo.png" class="img-fluid align-self-center"></a>
+            </div>
+            <div class="col-7 align-self-center text-center">
+                <ul class="menu-item-r">
+                    <li><a routerLink="/home">Home</a></li>
+                    <li><a routerLink="/personalizador/zapatillas">Diseña tus zapatos</a></li>
+                    <li><a routerLink="/colecciones">Colecciones</a></li>
+                    <li><a routerLink="/conocenos">Conócenos</a></li>
+                </ul>
+            </div>
+            <div class="col-7 col-md-8 col-lg-3 align-self-center" style="color:white">
+                <div class="row justify-content-center justify-content-md-center">
+                    <div data-toggle="modal" data-target="#perfilModal" class="col-3 col-sm-4 col-md-4 col-lg-7 col-xl-8 align-self-end menu-item">
+                        <div class="float-left mr-1 icon-menu" style="background-image:url('assets/images/nurse.svg')"></div>
+                        <p class="d-none d-sm-block text-menu">Ingresar</p>
+                    </div>
+                    <div data-toggle="modal" data-target="#carritoModal" class="col-5 col-sm-3 col-md-3 col-lg-3 col-xl-2 align-self-end menu-item">
+                        <div class="icon-bolsa"><img class="item-menu" src="assets/images/bolsa.svg">
+                            <p class=" text-menu">0</p>
+                        </div>
+                    </div>
+                    <div data-toggle="modal" data-target="#favoritosModal" class="col-3 col-sm-3 col-md-2 col-lg-2 col-xl-2 menu-item ">
+                        <div class="icon-menu" style="background-image:url('assets/images/heart.svg')"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<app-access></app-access>

@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <swiper [config]="configSwiper" [(index)]="index" class="col-12 col-lg-10" *ngIf="banners">
+            <div class="swiper-slide" *ngFor="let banner of banners">
+                <div class="slider ml-5 mr-5 m-md-0">
+                    <div class="row" style="margin-right:0">
+                        <div class="col-12 col-md-7 order-2 order-md-1 p-4 p-sm-1 pl-md-5  text-center text-md-right">
+                            <p class="title-slide title-slide-home"><span>{{ banner.text1 }}</span> {{ banner.text2 }}</p>
+                            <p class="subtitle-slide">{{ banner.description }}</p>
+                            <div class="clearfix"></div>
+                            <div class="select-category d-none d-lg-block" *ngIf="banner.design">
+                                <app-create clase="title-select"></app-create>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-5 order-1 order-md-2 pr-md-5">
+                            <div class="portada-slider" [ngStyle]="{'background-image': 'url(' + banner.image + ')'}"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </swiper>
+        <div class="swiper-button-prev-p btn-slider-home">
+            <p class="d-none d-md-block">Anterior</p>
+            <div class="d-block d-md-none" style="font-size: 38px;">
+                <i class="fas fa-caret-left"></i>
+            </div>
+        </div>
+        <div class="swiper-button-next-p btn-slider-home">
+            <p class="d-none d-md-block">Siguiente</p>
+            <div class="d-block d-md-none" style="font-size: 38px;">
+                <i class="fas fa-caret-right"></i>
+            </div>
+        </div>
+    </div>
+</div>

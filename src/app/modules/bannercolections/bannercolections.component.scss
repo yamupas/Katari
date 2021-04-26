@@ -1,0 +1,51 @@
+[class^="btn-6"] { 
+    font-family: "Muli", sans-serif;
+    font-weight: 400;
+    border: 1px solid #000;
+    padding: 10px;
+    transition: all 0.3s;
+    cursor: pointer;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+}   
+
+.btn-6 {
+    color: #000000;
+}
+.btn-6 span {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: #000000;
+    -webkit-transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: -1;
+}
+.btn-6:hover {
+    color: #FFFFFF;
+}
+.btn-6:hover span {
+    width: 225%;
+    height: 562.5px;
+    text-decoration: none;
+}
+.btn-6:active {
+    background-color: #000000;
+}
+
+.bg-3 {
+    z-index: 2;
+}
+
+@media (min-width: 600px) {
+    .wrap {
+        width: 50%;
+        float: left;
+    }
+}

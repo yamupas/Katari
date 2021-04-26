@@ -1,0 +1,222 @@
+<div id="view-customizer" class="bg-4">
+    <div class="container-fluid container-lg personalizacion pb-2 pb-md-5 water-mark">
+        <div class="row pt-5 pb-1 pb-md-5">
+            <div class="col-6 col-md-3">
+                <div data-toggle="modal" data-target="#tipoModal" class="d-block d-md-none btn-tip"><i class="fas fa-chevron-down"></i>Botines</div>
+                <div class="d-none d-md-block select-category text-center">
+                    <select>
+              <option>Botines<i class="fas fa-weight-hanging"></i></option>
+              <option>Zapatillas<i class="fas fa-weight-hanging"></i></option>
+              <option>Mocasines<i class="fas fa-weight-hanging"></i></option>
+            </select>
+                </div>
+            </div>
+            <div class="col-6 col-md-9 style-active">
+                <div data-toggle="modal" data-target="#materialModal" class="d-block d-md-none btn-mat"><i class="fas fa-chevron-down"></i>Materiales</div>
+                <div class="d-none d-md-block">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist" style="margin-top: 8px;text-align: center;">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="modelo-tab" data-toggle="tab" href="#modelo" role="tab" aria-controls="modelo" aria-selected="true">
+                                <div class="name-item-categories text-center">Modelo</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="altura-tab" data-toggle="tab" href="#altura" role="tab" aria-controls="altura" aria-selected="false">
+                                <div class="name-item-categories text-center">Altura de tacón</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="puntas-tab" data-toggle="tab" href="#puntas" role="tab" aria-controls="puntas" aria-selected="false">
+                                <div class="name-item-categories text-center">Puntas</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="diseno-tab" data-toggle="tab" href="#diseno" role="tab" aria-controls="diseno" aria-selected="false">
+                                <div class="name-item-categories text-center">Diseño</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="accesorios-tab" data-toggle="tab" href="#accesorios" role="tab" aria-controls="accesorios" aria-selected="false">
+                                <div class="name-item-categories text-center">Accesorios</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="materiales-tab" data-toggle="tab" href="#materiales" role="tab" aria-controls="materiales" aria-selected="false">
+                                <div class="name-item-categories text-center">Materiales</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row cont-1-p">
+            <div class="col-3 col-sm-2 col-md-3">
+                <div class="select-category">
+                    <h3 id="title-tabs" class="title-p d-none d-md-block">¿QUÉ MODELO PREFIERES?</h3>
+                    <p id="p-tabs" class="p-p  d-none d-md-block">Elige el modelo de tu zapato, es importante que no te saltes este paso.</p>
+                    <!--<select class="talla-p mt-5 mb-5  d-none d-md-block">
+              <option style="background-image:url('../../../assets/images/corte-1.png');">Corte 1</option>
+              <option>Corte 2</option>
+              <option>Corte 3</option>
+            </select>-->
+                    <div class="style-p-1 text-center text-md-left">
+                        <p class="p-p">Talla</p>
+                        <select>
+                            <option value="">28</option>
+                        </select>
+                        <div class="btn-verifica d-none d-md-block">Verifica <br>tu talla</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-5">
+                <div class="loading" id="js-loader">
+                    <div class="loader"></div>
+                </div>
+                <span class="drag-notice" id="js-drag-notice">Desliza para girar 360°</span>
+                <canvas id="c"></canvas>
+            </div>
+            <div class="col-3 d-block d-md-none mt-2">
+                <div class="btn-social"><i class="fas fa-share-alt"></i></div>
+                <div class="btn-social mt-3"><i class="far fa-heart"></i></div>
+            </div>
+            <div id="p-content" class="col-12 col-md-4 mt-3 mt-md-1">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="modelo" role="tabpanel" aria-labelledby="modelo-tab">
+                        <div class="cont-items">
+                            <div class="title-tab-cont">Modelo</div>
+                            <ul class="list-items-3">
+                                <li id="B1" class="hoverMat">
+                                    <div class="label-m-p">Botin 1</div>
+                                    <div class="borde-blanco-m m-active">
+                                        <div class="material-p" style="background-image: url('assets/personalizador/base_tacon.jpg');"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="altura" role="tabpanel" aria-labelledby="altura-tab">
+                        <div class="cont-items">
+                            <div class="title-tab-cont">Altura de tacón</div>
+                            <ul id="list-heel-height" class="list-items-3">
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="puntas" role="tabpanel" aria-labelledby="puntas-tab">
+                        <div class="cont-items">
+                            <div class="title-tab-cont">Puntas</div>
+                            <ul id="list-shoeTips" class="list-items-3">
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="diseno" role="tabpanel" aria-labelledby="diseno-tab">
+                        <div class="cont-items">
+                            <div class="title-tab-cont">Diseño</div>
+                            <ul id="list-design" class="list-items-3">
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="accesorios" role="tabpanel" aria-labelledby="accesorios-tab">
+                        <div class="cont-items">
+                            <div class="title-tab-cont">Taches</div>
+                            <ul id="lista-accesorios" class="list-items-3">
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="materiales" role="tabpanel" aria-labelledby="materiales-tab">
+                        <div class="cont-items">
+                            <div class="title-tab-cont">Materiales</div>
+                            <ul class="list-items">
+                                <li id="manhattan" class="hoverMat">
+                                    <p class="label-m-p">Manhattan</p>
+                                    <div class=" ml-2 borde-blanco-m m-active">
+                                        <div class="material-p" style="background-image: url('../../../assets/images/manhattan.JPG');"></div>
+                                    </div>
+                                </li>
+                                <li id="charol" class="hoverMat">
+                                    <p class="label-m-p">Charol</p>
+                                    <div class=" ml-2 borde-blanco-m m-active">
+                                        <div class="material-p" style="background-image: url('../../../assets/images/manhattan.JPG');"></div>
+                                    </div>
+                                </li>
+                                <li id="gramado" class="hoverMat">
+                                    <p class="label-m-p">Gramado</p>
+                                    <div class=" ml-2 borde-blanco-m m-active">
+                                        <div class="material-p" style="background-image: url('../../../assets/images/gramado.JPG');"></div>
+                                    </div>
+                                </li>
+                                <li id="tortuga" class="hoverMat">
+                                    <p class="label-m-p">Tortuga</p>
+                                    <div class=" ml-2 borde-blanco-m m-active">
+                                        <div class="material-p" style="background-image: url('../../../assets/images/tortuga.JPG');"></div>
+                                    </div>
+                                </li>
+                                <li id="boa" class="hoverMat">
+                                    <p class="label-m-p">Boa-foly</p>
+                                    <div class=" ml-2 borde-blanco-m m-active">
+                                        <div class="material-p" style="background-image: url('../../../assets/images/tortuga.JPG');"></div>
+                                    </div>
+                                </li>
+                                <li id="carmonata" class="hoverMat">
+                                    <p class="label-m-p">Carmonata-folia</p>
+                                    <div class=" ml-2 borde-blanco-m m-active">
+                                        <div class="material-p" style="background-image: url('modelos/texturas/carmonata-folia/rojo.png');"></div>
+                                    </div>
+                                </li>
+                                <li id="madera" class="hoverMat">
+                                    <p class="label-m-p">Madera</p>
+                                    <div class=" ml-2 borde-blanco-m m-active">
+                                        <div class="material-p" style="background-image: url('modelos/texturas/madera/miel.png');"></div>
+                                    </div>
+                                </li>
+                                <li id="mapana" class="hoverMat">
+                                    <p class="label-m-p">Mapana</p>
+                                    <div class=" ml-2 borde-blanco-m m-active">
+                                        <div class="material-p" style="background-image: url('modelos/texturas/mapana/cafe.png');"></div>
+                                    </div>
+                                </li>
+                                <li id="snake" class="hoverMat">
+                                    <p class="label-m-p">Snake</p>
+                                    <div class=" ml-2 borde-blanco-m m-active">
+                                        <div class="material-p" style="background-image: url('modelos/texturas/snake/rojo.png');"></div>
+                                    </div>
+                                </li>
+                                <li id="yarara" class="hoverMat">
+                                    <p class="label-m-p">Yarara</p>
+                                    <div class=" ml-2 borde-blanco-m m-active">
+                                        <div class="material-p" style="background-image: url('modelos/texturas/yarara/amarillo_inf_albedo.png');"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="cont-items-2">
+                            <p class="title-tab-cont">Colores</p>
+                            <div id="js-tray" class="tray">
+                                <ul id="js-tray-slide" class="tray__slide list-items-2">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-5">
+    <div class="container">
+        <div class="row pt-1 pt-md-5 pb-5 cont-foo">
+            <div class="col-6 col-md-3 align-self-center">
+                <div class="p-p">
+                    <i class="fas fa-chevron-left mr-1 mr-md-3"></i>Regresar a la tienda
+                </div>
+            </div>
+            <div class="col-6 col-md-9">
+                <div class="btn-bolsa">
+                    <i class="fas fa-shopping-bag"></i>
+                    <p class="precio-p"><span>$500.000</span><br>Añadir a la bolsa</p>
+                </div>
+                <div class="btn-guardar mr-3 d-none d-md-block"><i class="far fa-heart mr-2"></i>Guardar</div>
+                <div class="label-p d-none d-md-block"><i class="fas fa-share-alt mr-3"></i>Compartir</div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="container d-none d-lg-block pb-5 pt-5">
+    <div class="row justify-content-center">
+        <div class="col-12 mt-5 mb-2" *ngIf="title">
+            <div class="title-section text-center">blog</div>
+        </div>
+        <div class="col-12 mb-5">
+            <div class="btns-slider-1">
+                <div class="btn-slider-l swiper-button-prev-p-3"><i class="fas fa-chevron-left"></i></div>
+                <div class="btn-slider-r swiper-button-next-p-3"><i class="fas fa-chevron-right"></i></div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <swiper [config]="configSwiper" [(index)]="index" class="col-12" *ngIf="blogItems.length > 0">
+            <div class="swiper-slide" style="height: 300px" *ngFor="let item of blogItems">
+                <div class="bg_item" [ngStyle]="{'background-image': 'url(' + item.image + ')'}">
+                    <p class="p-item-swipe">
+                        {{ item.title }}
+                    </p>
+                    <div class="over_item">
+                        <p style="margin-bottom: 2em;">{{ item.title }}</p>
+                        <a routerLink="/blog/{{item.alias}}" class="btn-articulo mt-5">Ver articulo</a>
+                    </div>
+                </div>
+            </div>
+        </swiper>
+    </div>
+    <div class="row justify-content-center" *ngIf="link">
+        <div class="btn-articulo p-4 mt-5" style="text-transform:uppercase;">
+            <a routerLink="/blog">Ir al blog</a>
+        </div>
+    </div>
+</div>
